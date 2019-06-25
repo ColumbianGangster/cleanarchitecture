@@ -1,8 +1,8 @@
 package com.cleanarchitecture.data.mappers
 
-import com.cleanarchitecture.domain.albums.DomainCategory
-import com.cleanarchitecture.domain.albums.DomainRange
-import com.cleanarchitecture.domain.albums.DomainRecommendedProduct
+import com.cleanarchitecture.domain.richrelevance.DomainCategory
+import com.cleanarchitecture.domain.richrelevance.DomainRange
+import com.cleanarchitecture.domain.richrelevance.DomainRecommendedProduct
 import com.cleanarchitecture.domain.common.Mapper
 import com.richrelevance.Range
 import com.richrelevance.recommendations.Category

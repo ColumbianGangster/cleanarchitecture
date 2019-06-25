@@ -12,8 +12,8 @@ import com.cleanarchitecture.data.repository.RichRelevanceRepositoryImpl
 import com.cleanarchitecture.data.repository.SearchRepositoryImpl
 import com.cleanarchitecture.domain.albums.AlbumsRepository
 import com.cleanarchitecture.domain.albums.GetAlbumsUseCase
-import com.cleanarchitecture.domain.albums.GetRecommendedProductsUseCase
-import com.cleanarchitecture.domain.albums.RichRelevanceRepository
+import com.cleanarchitecture.domain.richrelevance.GetRecommendedProductsUseCase
+import com.cleanarchitecture.domain.richrelevance.RichRelevanceRepository
 import com.cleanarchitecture.domain.searchnavigation.GetProductsBySearchNavigationUseCase
 import com.cleanarchitecture.domain.searchnavigation.SearchRepository
 import com.cleanarchitecture.presentation.albums.AlbumsViewModel

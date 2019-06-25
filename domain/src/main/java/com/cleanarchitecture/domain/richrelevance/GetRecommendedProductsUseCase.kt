@@ -1,4 +1,4 @@
-package com.cleanarchitecture.domain.albums
+package com.cleanarchitecture.domain.richrelevance
 
 import com.cleanarchitecture.domain.common.SingleNoParamsUseCase
 import com.cleanarchitecture.domain.common.SingleRxTransformer

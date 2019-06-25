@@ -1,6 +1,6 @@
 package com.cleanarchitecture.presentation.mappers
 
-import com.cleanarchitecture.domain.albums.DomainRecommendedProduct
+import com.cleanarchitecture.domain.richrelevance.DomainRecommendedProduct
 import com.cleanarchitecture.domain.common.Mapper
 import com.cleanarchitecture.presentation.albums.UiProduct
 

@@ -1,4 +1,4 @@
-package com.cleanarchitecture.domain.albums
+package com.cleanarchitecture.domain.richrelevance
 
 import io.reactivex.Single
 
