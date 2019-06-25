@@ -3,10 +3,12 @@ package com.cleanarchitecture.presentation.albums
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cleanarchitecture.news_sample_app.R
+import com.cleanarchitecture.news_sample_app.databinding.ActivityAlbumsBinding
 import com.cleanarchitecture.presentation.common.ErrorViewType
 import com.cleanarchitecture.presentation.common.UiError
 import com.cleanarchitecture.presentation.navigation.AppNavigator
@@ -31,20 +33,22 @@ class AlbumsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_albums)
+
+        val albumsBinding: ActivityAlbumsBinding = DataBindingUtil.
+                setContentView(this, R.layout.activity_albums)
+        albumsBinding.lifecycleOwner = this
+        albumsBinding.viewModel = albumsViewModel
+
         initialiseView()
     }
 
     override fun onStart() {
         super.onStart()
         albumsViewModel.getAlbums()
-        albumsViewModel.loadingLiveData.observe(this, Observer {
-            loading(it)
-        })
-        albumsViewModel.contentLiveData.observe(this, Observer {
+        albumsViewModel.getContentObservable().observe(this, Observer {
             content(it)
         })
-        albumsViewModel.errorLiveData.observe(this, Observer {
+        albumsViewModel.getErrorObservable().observe(this, Observer {
             error(it)
         })
     }
@@ -53,10 +57,6 @@ class AlbumsActivity : AppCompatActivity() {
         albumsAdapter = AlbumsAdapter(onItemClick)
         rv_albums.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         rv_albums.adapter = albumsAdapter
-    }
-
-    private fun loading(isLoading: Boolean) {
-
     }
 
     private fun content(it: List<UiAlbum>) {

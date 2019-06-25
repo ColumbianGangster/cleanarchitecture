@@ -94,7 +94,7 @@ class HomeActivity : AppCompatActivity() {
                         .setMessage(error.message)
                         .setPositiveButton(error.positive) { dialog, _ ->
                             dialog.dismiss()
-                            //albumsViewModel.getAlbums()
+                            //albumsViewModel.getProducts()
                         }
                         .setCancelable(error.cancelable)
                         .show()

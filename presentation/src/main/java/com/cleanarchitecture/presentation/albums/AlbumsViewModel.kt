@@ -1,34 +1,39 @@
 package com.cleanarchitecture.presentation.albums
 
-import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.cleanarchitecture.domain.albums.DomainAlbum
 import com.cleanarchitecture.domain.albums.GetAlbumsUseCase
 import com.cleanarchitecture.domain.common.Mapper
 import com.cleanarchitecture.presentation.common.BaseViewModel
 import com.cleanarchitecture.presentation.common.UiError
+import com.cleanarchitecture.presentation.common.extensions.addTo
 
 class AlbumsViewModel(private val getAlbumsUseCase: GetAlbumsUseCase,
                       private val mapper: Mapper<DomainAlbum, UiAlbum>,
                       private val uiErrorMapper: Mapper<Throwable, UiError>) : BaseViewModel() {
 
     companion object {
-        private val TAG = "AlbumsViewModel"
+        const val TAG = "AlbumsViewModel"
     }
 
-    var loadingLiveData = MutableLiveData<Boolean>()
-    var contentLiveData = MutableLiveData<List<UiAlbum>>()
-    var errorLiveData = MutableLiveData<UiError>()
+    private val loadingLiveData = MutableLiveData<Boolean>()
+    private val contentLiveData = MutableLiveData<List<UiAlbum>>()
+    private val errorLiveData = MutableLiveData<UiError>()
 
     fun getAlbums() {
-        val disposable = getAlbumsUseCase.execute()
+        getAlbumsUseCase.execute()
                 .map { mapper.mapList(it) }
-                .subscribe({ response: List<UiAlbum> ->
-                    contentLiveData.value = response
-                }, { error: Throwable ->
-                    Log.d(TAG, error.message)
-                    errorLiveData.value = uiErrorMapper.map(error)
-                })
-        addDisposable(disposable)
+                .doOnSubscribe { loadingLiveData.value = true }
+                .doOnEvent { _, _ -> loadingLiveData.value = false }
+                .subscribe({ response: List<UiAlbum> -> contentLiveData.value = response },
+                        { error: Throwable -> errorLiveData.value = uiErrorMapper.map(error) })
+                .addTo(compositeDisposable)
+
     }
+
+    fun getLoadingObservable(): LiveData<Boolean> = loadingLiveData
+    fun getContentObservable(): LiveData<List<UiAlbum>> = contentLiveData
+    fun getErrorObservable(): LiveData<UiError> = errorLiveData
+
 }

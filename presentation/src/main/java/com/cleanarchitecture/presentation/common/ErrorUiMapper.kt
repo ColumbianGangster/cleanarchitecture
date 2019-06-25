@@ -9,7 +9,7 @@ class ErrorUiMapper : Mapper<Throwable, UiError> {
             title = "Error",
             message = from.message,
             errorViewType = ErrorViewType.DIALOG,
-            cancelable = false,
+            cancelable = true,
             throwable = from
     )
 }
