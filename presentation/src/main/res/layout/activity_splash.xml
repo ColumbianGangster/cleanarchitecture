@@ -2,13 +2,18 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@drawable/splash_screen_gradient">
 
-    <TextView
-        android:id="@+id/tv_splash_title"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/splash_title_proof_of_concept" />
+    <!-- We are using raster images instead of vectors due to Android's lack of support for
+    Radial gradient focal point, which is used to render the rays in the logo -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_currys_pcw_logo_splash"
+        android:contentDescription="@string/cd_logo" />
 
 </FrameLayout>
+
+

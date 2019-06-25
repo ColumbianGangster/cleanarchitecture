@@ -7,4 +7,8 @@
     <color name="blue">#4C4CFF</color>
     <color name="grey">#A0A0A0</color>
     <color name="activityBackground">@color/grey</color>
+
+    <!-- Splash -->
+    <color name="branding_blue">#2b2b79</color>
+    <color name="branding_purple">#7e1b72</color>
 </resources>
