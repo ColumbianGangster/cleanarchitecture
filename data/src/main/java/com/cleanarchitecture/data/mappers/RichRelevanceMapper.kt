@@ -37,5 +37,3 @@ class RichRelevanceMapper : Mapper<RecommendedProduct, DomainRecommendedProduct>
             hasChildren = from.hasChildren()
     )
 }
-
-fun String.toIntOrZero() = toIntOrNull() ?: 0
