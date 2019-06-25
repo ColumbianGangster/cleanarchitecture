@@ -45,7 +45,7 @@ val fragments = module {
     factory { (activity: AppCompatActivity) -> FragmentsTransactionsManager(activity.supportFragmentManager) }
 }
 
-private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+private const val BASE_URL = "https://recs.richrelevance.com/"
 private const val RETROFIT_INSTANCE = "Retrofit"
 private const val API = "Api"
 private const val GET_NEWS_USECASE = "getNewsUseCase"

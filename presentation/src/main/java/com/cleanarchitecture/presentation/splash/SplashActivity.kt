@@ -10,6 +10,14 @@ import io.reactivex.schedulers.Schedulers
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 import java.util.concurrent.TimeUnit
+import com.richrelevance.recommendations.RecommendedProduct
+import com.richrelevance.recommendations.PlacementResponse
+import com.richrelevance.recommendations.PlacementResponseInfo
+import com.richrelevance.RichRelevance
+import com.richrelevance.recommendations.Placement
+import android.util.Log
+import com.richrelevance.Callback
+
 
 class SplashActivity : AppCompatActivity() {
 

@@ -36,6 +36,7 @@ dependencies {
     implementation rootProject.ext.rxJava
     implementation rootProject.ext.retrofit
     implementation rootProject.ext.retrofitGsonConverter
+    implementation project(":richrelevancerelease")
 
     testImplementation rootProject.ext.junit
     testImplementation rootProject.ext.mockito
