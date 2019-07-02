@@ -28,7 +28,13 @@ class ProductsFragment : Fragment() {
     }
 
     private val onItemClick: ((UiProductListing?) -> Unit) = {
-//        it?.let { product ->
+        //        it?.let { product ->
+//
+//        }
+    }
+
+    private val onWishItemClicked: ((UiProductListing?) -> Unit) = {
+        //        it?.let { product ->
 //
 //        }
     }
@@ -64,7 +70,10 @@ class ProductsFragment : Fragment() {
     }
 
     private fun initialiseView() {
-        productAdapter = ProductsAdapter(onItemClick)
+        productAdapter = ProductsAdapter(
+                onItemClick = onItemClick,
+                onWishItemClick = onWishItemClicked
+        )
         rv_products.layoutManager = GridLayoutManager(this.context, 2)
         rv_products.adapter = productAdapter
     }

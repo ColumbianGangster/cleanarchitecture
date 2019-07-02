@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/products_nav_filter"
-        android:icon="@android:drawable/ic_menu_help"
+        android:icon="@drawable/ic_filter_list_black_24dp"
         android:title="@string/products_filter"
         app:showAsAction="always" />
 

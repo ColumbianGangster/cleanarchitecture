@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/material_design_spacing_small"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:descendantFocusability="afterDescendants">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -18,9 +19,19 @@
             android:layout_margin="@dimen/material_design_spacing_mediumlarge"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/stat_sys_warning" />
+
+
+        <ImageView
+            android:id="@+id/iv_products_wish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/sl_wishlist_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvProductDescription"
@@ -49,7 +60,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tvProductDescription"
             tools:text="TextView" />
 
-
         <TextView
             android:id="@+id/tvProductSavePrice"
             android:layout_width="wrap_content"
@@ -70,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
-            android:layout_marginTop="@dimen/material_design_spacing_mediumlarge"
+            android:layout_marginTop="@dimen/material_design_spacing_medium"
             android:layout_marginBottom="@dimen/material_design_spacing_large"
             android:theme="@style/RatingBar"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,36 +91,144 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/material_design_spacing_medium"
-            android:layout_marginTop="@dimen/material_design_spacing_mediumlarge"
+            android:layout_marginTop="@dimen/material_design_spacing_medium"
             android:layout_marginEnd="@dimen/material_design_spacing_mediumlarge"
             app:layout_constraintStart_toEndOf="@id/rtProductRating"
             app:layout_constraintTop_toBottomOf="@+id/tvProductPrice"
             tools:text="TextView" />
 
         <TextView
-            android:id="@+id/tvGuarantee"
+            android:id="@+id/tv_products_badge1"
             android:layout_width="match_parent"
             android:layout_height="21dp"
-            android:layout_marginStart="@dimen/material_design_spacing_medium"
+            android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
             android:layout_marginTop="@dimen/material_design_spacing_mediumlarge"
             android:layout_marginEnd="@dimen/material_design_spacing_mediumlarge"
             android:background="@drawable/tv_rectangle_bg"
             android:textAlignment="center"
+            android:textColor="@color/branding_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rtProductRating" />
 
         <TextView
-            android:id="@+id/tvDelivery"
+            android:id="@+id/tv_products_badge2"
             android:layout_width="match_parent"
             android:layout_height="21dp"
-            android:layout_marginStart="@dimen/material_design_spacing_medium"
+            android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
             android:layout_marginTop="@dimen/material_design_spacing_mediumlarge"
             android:layout_marginEnd="@dimen/material_design_spacing_mediumlarge"
-            android:drawableBottom="@drawable/plp_icon_delivery_active"
+            android:background="@drawable/tv_rectangle_bg"
+            android:textAlignment="center"
+            android:textColor="@color/branding_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvGuarantee" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_products_badge1" />
+
+        <TextView
+            android:id="@+id/tv_products_badge3"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
+            android:layout_marginTop="@dimen/material_design_spacing_mediumlarge"
+            android:layout_marginEnd="@dimen/material_design_spacing_mediumlarge"
+            android:background="@drawable/tv_rectangle_bg"
+            android:textAlignment="center"
+            android:textColor="@color/branding_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_products_badge2" />
+
+        <View
+            android:id="@+id/dvDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
+            android:layout_marginTop="@dimen/material_design_spacing_medium"
+            android:layout_marginEnd="@dimen/material_design_spacing_mediumlarge"
+            android:background="?android:attr/listDivider"
+            android:textColor="@color/nearblack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_products_badge3" />
+
+        <TextView
+            android:id="@+id/tvDeliveryActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
+            android:drawableBottom="@drawable/ic_plp_icon_delivery_active"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
+
+        <TextView
+            android:id="@+id/tvDeliveryActiveTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_design_spacing_small"
+            android:layout_marginEnd="@dimen/material_design_spacing_large"
+            android:drawableBottom="@drawable/plp_tick_active"
+            app:layout_constraintStart_toEndOf="@id/tvDeliveryActive"
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
+
+        <TextView
+            android:id="@+id/tvDeliveryCollectionActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:drawableBottom="@drawable/ic_plp_icon_collect_active"
+            app:layout_constraintStart_toEndOf="@id/tvDeliveryActiveTick"
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
+
+        <TextView
+            android:id="@+id/tvCollectActiveTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_design_spacing_small"
+            android:layout_marginEnd="@dimen/material_design_spacing_large"
+            android:drawableBottom="@drawable/plp_tick_active"
+            app:layout_constraintStart_toEndOf="@id/tvDeliveryCollectionActive"
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
+
+
+        <TextView
+            android:id="@+id/tvDeliveryInActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
+            android:drawableBottom="@drawable/ic_plp_collect_inactive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
+
+
+        <TextView
+            android:id="@+id/tvDeliveryInActiveTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_design_spacing_small"
+            android:layout_marginEnd="@dimen/material_design_spacing_large"
+            android:drawableBottom="@drawable/ic_plp_item_not_available"
+            app:layout_constraintStart_toEndOf="@id/tvDeliveryInActive"
+
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
+
+        <TextView
+            android:id="@+id/tvCollectionInActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:drawableBottom="@drawable/ic_plp_collect_inactive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
+
+        <TextView
+            android:id="@+id/tvCollectInActiveTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_design_spacing_small"
+            android:layout_marginEnd="@dimen/material_design_spacing_large"
+            android:drawableBottom="@drawable/ic_plp_item_not_available"
+            app:layout_constraintStart_toEndOf="@id/tvCollectionInActive"
+            app:layout_constraintTop_toBottomOf="@+id/dvDelivery" />
 
 
         <View
@@ -119,7 +237,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvDelivery" />
+            app:layout_constraintTop_toBottomOf="@id/tvDeliveryActive" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

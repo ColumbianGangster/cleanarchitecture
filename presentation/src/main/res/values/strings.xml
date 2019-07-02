@@ -19,6 +19,8 @@
     <string name="products_sort">Sort</string>
     <string name="products_filter">Filter</string>
 
+    <string name="products_save">Save %1$s</string>
+
     <!-- Albums -->
 
 

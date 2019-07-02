@@ -1,50 +1,50 @@
 package com.cleanarchitecture.presentation.products
 
 data class UiProducts(
-        var products: List<UiProduct>? = null
+        val products: List<UiProduct>? = null
 )
 
 data class UiProduct(
-        var id: String? = null,
-        var sku: String? = null,
-        var label: String? = null,
-        var link: String? = null,
-        var fullDescription: String? = null,
-        var brand: UiBrand? = null,
-        var boxType: String? = null,
-        var isOnline: Boolean? = null,
-        var subProducts: Any? = null,
-        var images: List<UiImage>? = null,
-        var mainFeatures: List<String>? = null,
-        var categorisation: UiCategorisation? = null,
-        var externalCategorisation: UiExternalCategorisation? = null,
-        var price: UiPrice? = null,
-        var wasPrice: UiWasPrice? = null,
-        var priceInBundle: UiPriceInBundle? = null,
-        var preOrder: UiPreOrder? = null,
-        var forwardOrder: UiForwardOrder? = null,
-        var deliveryOptions: List<UiDeliveryOption>? = null,
-        var energyEfficiency: Any? = null,
-        var icons: List<Any>? = null,
-        var badges: List<UiBadge>? = null,
-        var customerReview: UiCustomerReview? = null
+        val id: String? = null,
+        val sku: String? = null,
+        val label: String? = null,
+        val link: String? = null,
+        val fullDescription: String? = null,
+        val brand: UiBrand? = null,
+        val boxType: String? = null,
+        val isOnline: Boolean? = null,
+        val subProducts: Any? = null,
+        val images: List<UiImage>? = null,
+        val mainFeatures: List<String>? = null,
+        val categorisation: UiCategorisation? = null,
+        val externalCategorisation: UiExternalCategorisation? = null,
+        val price: UiPrice? = null,
+        val wasPrice: UiWasPrice? = null,
+        val priceInBundle: UiPriceInBundle? = null,
+        val preOrder: UiPreOrder? = null,
+        val forwardOrder: UiForwardOrder? = null,
+        val deliveryOptions: List<UiDeliveryOption>? = null,
+        val energyEfficiency: Any? = null,
+        val icons: List<Any>? = null,
+        val badges: List<UiBadge>? = null,
+        val customerReview: UiCustomerReview? = null
 )
 
 data class UiBrand(
-        var id: String? = null,
-        var label: String? = null
+        val id: String? = null,
+        val label: String? = null
 )
 
 data class UiCategorisation(
-        var universeId: String? = null,
-        var categoryId: String? = null,
-        var marketId: String? = null,
-        var segmentId: String? = null
+        val universeId: String? = null,
+        val categoryId: String? = null,
+        val marketId: String? = null,
+        val segmentId: String? = null
 )
 
 data class UiCustomerReview(
-        var number: Int? = null,
-        var averageScore: Double? = null
+        val number: Int? = null,
+        val averageScore: Double? = null
 )
 
 data class UiBadge(
@@ -54,65 +54,65 @@ data class UiBadge(
 )
 
 data class UiDeliveryOption(
-        var id: String? = null,
-        var label: String? = null,
-        var enabled: Boolean? = null
+        val id: String? = null,
+        val label: String? = null,
+        val enabled: Boolean? = null
 )
 
 data class UiExternalCategorisation(
-        var planningGroup: UiPlanningGroup? = null,
-        var subPlanningGroup: UiSubPlanningGroup? = null,
-        var merchandiseArea: UiMerchandiseArea? = null
+        val planningGroup: UiPlanningGroup? = null,
+        val subPlanningGroup: UiSubPlanningGroup? = null,
+        val merchandiseArea: UiMerchandiseArea? = null
 )
 
 data class UiForwardOrder(
-        var available: Boolean? = null,
-        var message: Any? = null
+        val available: Boolean? = null,
+        val message: Any? = null
 )
 
 data class UiImage(
-        var url: String? = null,
-        var urlSizeMedium: String? = null
+        val url: String? = null,
+        val urlSizeMedium: String? = null
 )
 
 data class UiMerchandiseArea(
-        var id: String? = null,
-        var label: String? = null
+        val id: String? = null,
+        val label: String? = null
 )
 
 data class UiPlanningGroup(
-        var id: String? = null,
-        var label: String? = null
+        val id: String? = null,
+        val label: String? = null
 )
 
 data class UiPreOrder(
-        var available: Boolean? = null,
-        var message: Any? = null
+        val available: Boolean? = null,
+        val message: Any? = null
 )
 
 data class UiPrice(
-        var amount: Int? = null,
-        var vatAmount: Int? = null,
-        var currencyCode: String? = null,
-        var discountAmount: Int? = null
+        val amount: Int? = null,
+        val vatAmount: Int? = null,
+        val currencyCode: String? = null,
+        val discountAmount: Int? = null
 )
 
 data class UiPriceInBundle(
-        var amount: Int? = null,
-        var vatAmount: Int? = null,
-        var currencyCode: String? = null
+        val amount: Int? = null,
+        val vatAmount: Int? = null,
+        val currencyCode: String? = null
 )
 
 data class UiSubPlanningGroup(
-        var id: String? = null,
-        var label: String? = null
+        val id: String? = null,
+        val label: String? = null
 )
 
 data class UiWasPrice(
-        var amount: Int? = null,
-        var vatAmount: Int? = null,
-        var currencyCode: String? = null,
-        var dateFrom: String? = null,
-        var dateTo: String? = null,
-        var discountAmount: String? = null
+        val amount: Int? = null,
+        val vatAmount: Int? = null,
+        val currencyCode: String? = null,
+        val dateFrom: String? = null,
+        val dateTo: String? = null,
+        val discountAmount: String? = null
 )
