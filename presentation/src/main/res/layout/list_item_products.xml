@@ -16,7 +16,8 @@
             android:id="@+id/ivProduct"
             android:layout_width="@dimen/products_image_width"
             android:layout_height="@dimen/products_image_height"
-            android:layout_margin="@dimen/material_design_spacing_mediumlarge"
+            android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
+            android:layout_marginTop="@dimen/material_design_spacing_mediumlarge"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -38,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
-            android:layout_marginTop="@dimen/material_design_spacing_small"
+            android:layout_marginTop="@dimen/material_design_spacing_mediumlarge"
             android:layout_marginEnd="@dimen/material_design_spacing_mediumlarge"
             android:textColor="@color/nearblack"
             android:textSize="@dimen/text_5"
@@ -49,6 +50,7 @@
 
         <TextView
             android:id="@+id/tvProductPrice"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"

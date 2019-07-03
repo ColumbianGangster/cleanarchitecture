@@ -85,7 +85,7 @@ class ProductsAdapter(val onItemClick: (UiProductListing?) -> Unit, val onWishIt
                 tvReviewNumbers.text = productListing.result.reevoo_count.toString()
                 Picasso.get().load(productListing.result.image).into(ivProduct)
                 rtProductRating.rating = productListing.result.reevoo_score.toFloat() / 2
-                tvProductDescription.text = productListing.result.short_description
+                tvProductDescription.text = productListing.result.title
 
                 setOnClickListener {
                     onItemClick.invoke(productListing)
