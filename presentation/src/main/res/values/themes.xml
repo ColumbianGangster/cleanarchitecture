@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- base set of styles that apply to all versions -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppBaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="android:windowBackground">@color/white</item>
-        <item name="actionBarStyle">@style/ActionBar.NoElevation</item>
-        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.ActionBar.White</item>
+
+        <!-- actionBarStyle and actionBarTheme removed as parent inherits from NoActionBar and
+        toolbar applies its own theme" -->
     </style>
 
     <style name="AppBaseTheme.Grey" parent="AppBaseTheme">

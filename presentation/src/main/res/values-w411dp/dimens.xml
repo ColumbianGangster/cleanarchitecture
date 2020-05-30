@@ -13,4 +13,21 @@
     <dimen name="material_design_spacing_large">18.4dp</dimen>
     <dimen name="products_rating_bar_height">27.6dp</dimen>
     <dimen name="products_card_width">192dp</dimen>
+
+    <dimen name="branding_margin_top">13.8dp</dimen>
+    <dimen name="branding_margin_start">13.8dp</dimen>
+    <dimen name="branding_margin_end">13.8dp</dimen>
+    <dimen name="branding_separator">18.4dp</dimen>
+    <dimen name="promoted_item_height">123.05dp</dimen>
+    <dimen name="promoted_item_width">144.9dp</dimen>
+    <dimen name="promoted_item_card_height">368dp</dimen>
+    <dimen name="promoted_item_card_width">172.5dp</dimen>
+
+    <dimen name="home_indicator_margin_top">9.2dp</dimen>
+    <dimen name="browse_products_height">48.3dp</dimen>
+    <dimen name="home_browse_image_size">18.4dp</dimen>
+    <dimen name="home_browse_products_text_size">18sp</dimen>
+    <dimen name="home_logo_width">175dp</dimen>
+
+
 </resources>

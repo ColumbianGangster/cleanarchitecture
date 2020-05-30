@@ -24,6 +24,7 @@
     <string name="search_hint">Looking for something?</string>
     <string name="browse_products_label">Browse Products</string>
     <string name="promoted_items_label">Promoted Items</string>
+    <string name="menu_barcode_scanning_label">Scan a Barcode</string>
 
     <!-- Albums -->
 

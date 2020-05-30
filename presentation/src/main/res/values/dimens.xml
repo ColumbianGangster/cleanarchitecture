@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="material_design_elevation">16dp</dimen>
-    <dimen name="branding_margin_top">26dp</dimen>
-    <dimen name="branding_margin_start">26dp</dimen>
-    <dimen name="branding_margin_end">26dp</dimen>
-    <dimen name="branding_padding_bottom">35dp</dimen>
-    <dimen name="promoted_item_height">237dp</dimen>
-    <dimen name="promoted_item_width">280dp</dimen>
-    <dimen name="promoted_item_card_height">480dp</dimen>
+    <dimen name="branding_margin_top">12dp</dimen>
+    <dimen name="branding_margin_start">12dp</dimen>
+    <dimen name="branding_margin_end">12dp</dimen>
+    <dimen name="branding_padding_bottom">18.7dp</dimen>
+    <dimen name="branding_separator">16dp</dimen>
+
+    <!-- promoted items -->
+    <dimen name="promoted_item_height">107dp</dimen>
+    <dimen name="promoted_item_width">126dp</dimen>
+    <dimen name="promoted_item_card_height">320dp</dimen>
+    <dimen name="promoted_item_card_width">150dp</dimen>
+
     <dimen name="coordinatorLayout_height">0dp</dimen>
     <dimen name="bottom_navigation_width">0dp</dimen>
     <dimen name="toolbar_content">0dp</dimen>
-    <dimen name="hero_image_height">300dp</dimen>
+    <dimen name="hero_image_height">560dp</dimen>
     <dimen name="searchview_margin_start">8dp</dimen>
     <dimen name="searchview_margin_top">16dp</dimen>
     <dimen name="searchview_margin_end">8dp</dimen>
     <dimen name="searchview_elevation">3dp</dimen>
     <dimen name="search_background_height">70dp</dimen>
-    <dimen name="browse_products_height">50dp</dimen>
+
+    <dimen name="browse_products_height">42dp</dimen>
+
     <dimen name="browse_products_margin_start">8dp</dimen>
     <dimen name="viewpager_height">300dp</dimen>
     <dimen name="rv_promoteditems_margin_top">16dp</dimen>
@@ -45,4 +52,8 @@
     <dimen name="material_design_spacing_large">16dp</dimen>
     <dimen name="products_rating_bar_height">24dp</dimen>
     <dimen name="products_card_width">167dp</dimen>
+    <dimen name="home_indicator_margin_top">8dp</dimen>
+    <dimen name="home_browse_image_size">16dp</dimen>
+    <dimen name="home_browse_products_text_size">15sp</dimen>
+    <dimen name="home_logo_width">152.2dp</dimen>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#723F89</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#4855A0</color>
+    <color name="colorPrimaryDark">#30396b</color>
+    <color name="colorAccent">#EE9022</color>
     <color name="white">#FFFFFF</color>
     <color name="blue">#4C4CFF</color>
     <color name="grey">#A0A0A0</color>
@@ -15,8 +15,10 @@
 
 
     <!-- Common Styling -->
-    <color name="branding_heading_text">#4855A0</color>
-    <color name="branding_background">#D8D8D8</color>
+    <color name="branding_heading_text">#000000</color>
+    <color name="branding_background">#F2F2F2</color>
     <color name="nearblack">#222222</color>
     <color name="price_red">#C90404</color>
+    <color name="branding_white">#FFFFFF</color>
+    <color name="navigation_inactive">#A3AACF</color>
 </resources>

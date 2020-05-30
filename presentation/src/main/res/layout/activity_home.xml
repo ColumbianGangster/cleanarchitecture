@@ -28,13 +28,16 @@
                 android:id="@+id/toolbar_home"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar.White"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:contentInsetStartWithNavigation="@dimen/toolbar_content">
 
-                <TextView
-                    android:id="@+id/tv_home_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/home_activity_title" />
+                <ImageView
+                    android:layout_width="@dimen/home_logo_width"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_currys_pcw_logo_splash"
+                    android:layout_gravity="center"
+                    />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -46,8 +49,8 @@
         android:id="@+id/bottom_nav"
         android:layout_width="@dimen/bottom_navigation_width"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:elevation="@dimen/material_design_elevation"
+        style="@style/Widget.MaterialComponents.BottomNavigationView"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

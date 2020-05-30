@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,18 +11,15 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/cardView"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/promoted_item_card_height"
+        android:layout_width="@dimen/promoted_item_card_width"
+        android:layout_height="match_parent"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/branding_padding_bottom"
+            android:paddingBottom="@dimen/branding_separator"
             >
 
             <ImageView
@@ -41,12 +40,11 @@
                 android:layout_width="@dimen/promoted_item_name_width"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/branding_margin_start"
-                android:layout_marginTop="@dimen/branding_margin_top"
+                android:layout_marginTop="@dimen/branding_separator"
                 android:layout_marginEnd="@dimen/branding_margin_end"
-                android:ellipsize="end"
-                android:maxLines="3"
                 android:text="@{promotedItem.name}"
-                android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                android:textSize="16sp"
+                android:textColor="#222222"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivPromotedItemIcon"
@@ -55,13 +53,13 @@
 
             <RatingBar
                 android:id="@+id/rbPromotedItemRating"
-                style="?android:attr/ratingBarStyleSmall"
+                style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/branding_margin_start"
-                android:layout_marginTop="@dimen/branding_margin_top"
+                android:backgroundTint="@android:color/holo_orange_dark"
                 android:rating="@{promotedItem.rating}"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/branding_margin_top"
+                app:layout_constraintStart_toStartOf="@+id/tvPrice"
                 app:layout_constraintTop_toBottomOf="@+id/tvPrice"
                 tools:rating="3" />
 
@@ -73,10 +71,29 @@
                 android:layout_marginTop="@dimen/branding_margin_top"
                 android:layout_marginEnd="@dimen/branding_margin_end"
                 android:text="@{@string/promoted_item_price(promotedItem.price)}"
-                android:textAppearance="@android:style/TextAppearance.Material.Body2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvPromotedItemName"/>
+
+            <TextView
+                android:id="@+id/tvRatingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/branding_separator"
+                android:text="@{promotedItem.ratingCount}"
+                app:layout_constraintStart_toEndOf="@+id/rbPromotedItemRating"
+                app:layout_constraintTop_toTopOf="@+id/rbPromotedItemRating" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbPromotedItemRating"
+                tools:layout_editor_absoluteX="0dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
